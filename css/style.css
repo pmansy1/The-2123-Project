@@ -1,42 +1,109 @@
-/* Box Model Hack */
-* {
-     box-sizing: border-box;
-}
-
-/* Clear fix hack */
-.clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
-}
-
-.clear {
-	clear: both;
-}
-
-/******************************************
-/* BASE STYLES
-/*******************************************/
-
+/* Global Styles */
 body {
+     font-family: 'Georgia', Arial, sans-serif;
+     margin: 0;
+     padding-left: 10px;
+     padding-right: 10px;
+     background: rgb(0, 65, 121);
+     color: #ffffff;
+     line-height: 1.6;
+   }
 
+   
+  /* Head Section Styles */
+  #HeadSec h1{
+    display: flex;
+    flex-direction: row;
+    font-style: Bold;
+    font-size: 40px;
+    padding: 0px;
+    margin: 0px;
+  
+
+  }
+  #HeadSec h3 {
+    font-family: 'Arial';
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+  }
+  #HeadSec ul {
+    display: flex;
+    justify-content: center;
+    justify-content:space-around;
+    list-style-type: none; 
+    width: auto;
+    padding-left: 0px;
+  }
+  #HeadSec li { 
+    margin-left: 10px;
+    
+  }
+
+
+  /* Hero Section Styles */
+#HeroSec  {
+  font-style: Bold;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+  width:auto;
+  border-top: solid grey;
+  border-bottom: solid grey;
+  padding: 0;
 }
 
-
-/******************************************
-/* LAYOUT
-/*******************************************/
-header {
-
+#HeroSec button{ 
+  font-family: 'Arial';
+  height: 50px;
+  width: 200px;
+  background-color: rgb(243, 196, 4);
+  border: solid rgb(1, 56, 104) 1px;
+  border-radius: 10px;
+ 
 }
 
-footer {
+  /* About Section Styles */
 
-}
+  #AboutSec {
+    display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+    border-top: solid grey;
+    border-bottom: solid grey;
+  }
+  #OverviewSec {
+    width:auto;
+    border-top: solid red;
+    border-bottom: solid red;
+    flex: 1;
+  min-width: 280px;
+  font-size: 1.1rem;
+  padding: 20px;
+  }
 
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+  #OverviewSec h2{
+    font-size: 25px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  #OverviewSec p {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+  }
+
+  #timelineSection{
+    flex: 1;
+  min-width: 280px;
+  padding: 20px;
+  }
