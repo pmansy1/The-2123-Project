@@ -14,28 +14,27 @@ body {
   #HeadSec h1{
     display: flex;
     flex-direction: row;
-    font-style: Bold;
+    font-weight: bold;
     font-size: 40px;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
   
 
   }
   #HeadSec h3 {
-    font-family: 'Arial';
+    font-family: 'Arial', serif;
     display: flex;
     flex-direction: row;
     font-size: 20px;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
   }
   #HeadSec ul {
     display: flex;
-    justify-content: center;
     justify-content:space-around;
     list-style-type: none; 
     width: auto;
-    padding-left: 0px;
+    padding-left: 0;
   }
   #HeadSec li { 
     margin-left: 10px;
@@ -45,7 +44,7 @@ body {
 
   /* Hero Section Styles */
 #HeroSec  {
-  font-style: Bold;
+  font-weight: bold;
   font-size: 25px;
   display: flex;
   flex-direction: column;
@@ -58,8 +57,8 @@ body {
   padding: 0;
 }
 
-#HeroSec button{ 
-  font-family: 'Arial';
+#HeroSec button{
+  font-family: 'Arial', serif;
   height: 50px;
   width: 200px;
   background-color: rgb(243, 196, 4);
@@ -72,11 +71,13 @@ body {
 
   #AboutSec {
     display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+    height: 500px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
     border-top: solid grey;
     border-bottom: solid grey;
   }
@@ -84,10 +85,11 @@ body {
     width:auto;
     border-top: solid red;
     border-bottom: solid red;
-    flex: 1;
-  min-width: 280px;
-  font-size: 1.1rem;
-  padding: 20px;
+    flex: 0.5;
+    min-width: 280px;
+    font-size: 1.1rem;
+    padding: 0;
+    /*transform: translateY(5px);*/
   }
 
   #OverviewSec h2{
@@ -100,10 +102,54 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 15px;
+    padding-right: 70px;
   }
 
+  /* Time Line Styles*/
   #timelineSection{
     flex: 1;
-  min-width: 280px;
-  padding: 20px;
+    min-width: 280px;
   }
+
+  #line {
+    border-bottom: solid rgb(243, 196, 4) 2px;
+    width: 80%;
+    transform: translateX(100px);
+  }
+.dot {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transform: translateX(80px)
+}
+#dot2{
+  transform: translateX(120px)
+}
+#dot3{
+  transform: translateX(200px)
+}
+
+.dot-container {
+  display: flex;
+  width: 70%;
+  justify-content: space-between; /* Even horizontal spacing */
+  align-items: flex-start; /* Aligns items to the top of the container */
+  transform: translateY(-10px);
+}
+
+#timelineSection ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  transform: translateX(-30px);
+}
+#timelineSection ul li {
+  transform: rotate(-30deg);
+  padding: 10px;
+}
+
+
+
