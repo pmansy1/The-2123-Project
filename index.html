@@ -13,20 +13,23 @@
   </head>
 
   <body>
-    <header id="HeadSec">
-      <h1>The 2123 Project</h1>
-      <h3>Envisioning Life in 2123</h3>
+  <header id="HeadSec">
+    <nav class="navbar">
       <ul id="navBar">
-        <li id="About">Overview</li>
-        <li id="How">How It Works</li>
-        <li id="Featured">Featured Visions</li>
-        <li id="Create">Create Your Own</li>
-        <li id="Historical">Historical Exhibit</li>
-        <li id="About Us">About Us</li>
+        <li><a href="#About">Overview</a></li>
+        <li><a href="#How">How It Works</a></li>
+        <li><a href="#Featured">Featured Visions</a></li>
+        <li><a href="#Create">Create Your Own</a></li>
+        <li><a href="#Historical">Historical Exhibit</a></li>
+        <li><a href="#AboutUs">About Us</a></li>
       </ul>
-    </header>
+    </nav>
+  </header>
 
-    <div id="HeroSec">
+
+  <div id="HeroSec">
+      <h1>THE 2123 PROJECT</h1>
+      <h3>Envisioning Life in 2123</h3>
       <h2>EXPLORE THE FUTURE</h2>
       <button id="ctaBtn">Explore</button>
     </div>
@@ -75,16 +78,28 @@
 
     <div id="HowSec">
       <h2>How It Works</h2>
+      <div id="imgContainer">
+        <img  id= "SubmitPNG" src="assets/Submit.png" alt="Submit.pn">
+        <img id= "TradingCardPNG" src="assets/TradingCard.png" alt="TradingCard.png">
+        <img id= "ExhibitPNG" src="assets/Exhibit.png" alt="Exhibit.png">
+
+      </div>
+      <div id="stepContainer">
+        <p>Step 1:</p>
+        <p>Step 2:</p>
+        <p>Step 3:</p>
+      </div>
+
       <ul>
         <li>
-          Step 1: "Submit Your Vision" – Form where users share futuristic
+          Submit Your Vision – Form where users share futuristic
           ideas.
         </li>
         <li>
-          Step 2: "AI Trading Cards" – AI generates illustrated concept cards.
+          AI Trading Cards – AI generates illustrated concept cards.
         </li>
         <li>
-          Step 3: "Showcased in the Exhibit" – Selected ideas featured in a
+          Showcased in the Exhibit – Selected ideas featured in a
           virtual & physical gallery.
         </li>
       </ul>
@@ -92,24 +107,76 @@
 
     <div id="FeaturedSec">
       <h2>Featured Works</h2>
-      <div>*Card Examples*</div>
+
+      <div class="carousel">
+
+        <ul class="slides">
+          <li class="slide" id="s1">
+            <img src="assets/33.png" alt="Slide 1">
+          </li>
+          <li class="slide" id="s2">
+            <img src="assets/77.png" alt="Slide 2">
+          </li>
+          <li class="slide" id="s3">
+            <img src="assets/96.png" alt="Slide 3">
+          </li>
+          <li class="slide" id="s4">
+            <img src="assets/12.png" alt="Slide 4">
+          </li>
+        </ul>
+
+      </div>
     </div>
 
-    <div id="HistoricalSec">
-      <h2>Historical Exhibit</h2>
-      <div>*Card Examples*</div>
+
+
+<!--    <div id="HistoricalSec">-->
+<!--      <h2>Historical Exhibit</h2>-->
+<!--      <div>*Card Examples*</div>-->
+<!--    </div>-->
+
+    <div id="CreateSec" class="create-section">
+      <h2>Create Your Own Vision</h2>
+      <p>Be part of Trinity’s future. Share your bold idea for the world of 2123 below:</p>
+
+      <form class="create-form">
+        <label>
+          <input type="text" placeholder="Enter your vision here..." required>
+        </label>
+        <button type="submit">Submit Vision</button>
+      </form>
     </div>
 
-    <div id="CreateSec">
-      <h2>Create Your Own</h2>
-      <label>
-        <input type="text" placeholder= " Enter your vision here" />
-      </label>
-    </div>
 
-    <footer>
-      <a href="#"><img src="#" alt="#" /></a>
-      <p>Contact Info</p>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <img src="assets/trinity-logo.png" alt="Trinity College Logo" class="logo">
+          <p class="project-name">The 2123 Project</p>
+          <p class="tagline">A Vision for Trinity’s Tercentennial</p>
+        </div>
+
+        <div class="footer-center">
+          <p><strong>Contact Us</strong></p>
+          <p>📍 Trinity College, Hartford, CT</p>
+          <p>📧 <a href="mailto:2123project@trincoll.edu">2123project@trincoll.edu</a></p>
+        </div>
+
+        <div class="footer-right">
+          <p><strong>Quick Links</strong></p>
+          <a href="#about">About</a><br>
+          <a href="#how-it-works">How It Works</a><br>
+          <a href="#featured">Featured Visions</a><br>
+          <a href="#submit">Submit Your Vision</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 The 2123 Project. All rights reserved.</p>
+        <marquee behavior="scroll" direction="left" class="quote">
+          “The future belongs to those who imagine it.”
+        </marquee>
+      </div>
     </footer>
 
     <script type="text/javascript" src="js/main.js"></script>

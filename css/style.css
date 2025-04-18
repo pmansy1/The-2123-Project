@@ -10,25 +10,8 @@ body {
    }
 
    
-  /* Head Section Styles */
-  #HeadSec h1{
-    display: flex;
-    flex-direction: row;
-    font-weight: bold;
-    font-size: 40px;
-    padding: 0;
-    margin: 0;
-  
+  /* HEAD SECTION STYLES */
 
-  }
-  #HeadSec h3 {
-    font-family: 'Arial', serif;
-    display: flex;
-    flex-direction: row;
-    font-size: 20px;
-    padding: 0;
-    margin: 0;
-  }
   #HeadSec ul {
     display: flex;
     justify-content:space-around;
@@ -36,13 +19,46 @@ body {
     width: auto;
     padding-left: 0;
   }
-  #HeadSec li { 
-    margin-left: 10px;
-    
-  }
+/* Sticky header styles */
+#HeadSec {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #004179; /* Trinity Blue */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
+/* Navbar layout */
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
 
-  /* Hero Section Styles */
+/* Navbar list styles */
+#navBar {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navbar link styles */
+#navBar li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+#navBar li a:hover {
+  color: #F3C404; /* Trinity Gold */
+}
+
+/* HERO SECTION STYLES */
 #HeroSec  {
   font-weight: bold;
   font-size: 25px;
@@ -56,23 +72,50 @@ body {
   border-bottom: solid grey;
   padding: 0;
 }
-
-#HeroSec button{
-  font-family: 'Arial', serif;
-  height: 50px;
-  width: 200px;
-  background-color: rgb(243, 196, 4);
-  border: solid rgb(1, 56, 104) 1px;
-  border-radius: 10px;
- 
+#HeroSec h1{
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  font-size: 60px;
+  padding: 0;
+  margin: 0;
+}
+#HeroSec h2{
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 30px;
 }
 
-  /* About Section Styles */
+#HeroSec h3 {
+  font-family: 'Arial', serif;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+#HeroSec button{
+  padding: 0.75rem 1.5rem;
+  background-color: #F3C404;
+  color: #004179;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#HeroSec button:hover{
+  background-color: rgb(204, 169, 2);
+}
+
+  /* ABOUT SECTION STYLES */
 
   #AboutSec {
     display: flex;
     height: 500px;
-    flex-wrap: wrap;
     align-items: center;
     gap: 20px;
     max-width: 1200px;
@@ -81,10 +124,9 @@ body {
     border-top: solid grey;
     border-bottom: solid grey;
   }
+
   #OverviewSec {
-    width:auto;
-    border-top: solid red;
-    border-bottom: solid red;
+    width: auto;
     flex: 0.5;
     min-width: 280px;
     font-size: 1.1rem;
@@ -105,17 +147,26 @@ body {
     padding-right: 70px;
   }
 
-  /* Time Line Styles*/
+  /* TIME LINE STYLES */
   #timelineSection{
     flex: 1;
     min-width: 280px;
+    transform: translateY(20px);
+  }
+#timelineSection h2{
+  transform: translateX(50px);
+}
+
+#timelineSection h3{
+  padding-top: 20px;
+}
+
+#line {
+  border-bottom: solid rgb(243, 196, 4) 2px;
+  width: 80%;
+  transform: translateX(100px);
   }
 
-  #line {
-    border-bottom: solid rgb(243, 196, 4) 2px;
-    width: 80%;
-    transform: translateX(100px);
-  }
 .dot {
   height: 20px;
   width: 20px;
@@ -150,6 +201,236 @@ body {
   transform: rotate(-30deg);
   padding: 10px;
 }
+
+
+/*HOW IT WORKS SECTION STYLES*/
+
+#HowSec{
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 550px;
+  width: auto;
+  border-top: solid grey;
+  border-bottom: solid grey;
+  padding: 0;
+}
+#HowSec h2{
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 0;
+}
+
+#HowSec ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  width: 95%;
+  padding-left: 0;
+}
+
+#imgContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  padding: 0;
+}
+
+#HowSec img{
+  height: 180px;
+  width: 180px;
+}
+
+#stepContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 30px;
+  width: 77%;
+  padding: 0 ;
+}
+
+#HowSec li{
+  display: flex;
+  font-size: 15px;
+  justify-content: space-between;
+  width: 70%;
+}
+
+
+/*FEATURED SECTION STYLES*/
+
+#FeaturedSec{
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+  width: auto;
+  border-top: solid grey;
+  border-bottom: solid grey;
+  padding: 0;
+}
+
+#FeaturedSec h2{
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 50px;
+}
+
+.carousel{
+  width : 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#FeaturedSec ul{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  list-style-type: none;
+}
+#FeaturedSec img {
+  height: 315px;
+  width: 230px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#FeaturedSec img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/*CREATE YOUR OWN SECTION STYLES */
+.create-section {
+  background-color: #004179; /* Trinity Blue */
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.create-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.create-section p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.create-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.create-form input[type="text"] {
+  padding: 0.75rem 1rem;
+  width: 300px;
+  max-width: 90%;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.create-form button {
+  padding: 0.75rem 1.5rem;
+  background-color: #F3C404;
+  color: #004179;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.create-form button:hover {
+  background-color: #d5ae00;
+}
+
+
+
+/* FOOTER STYLES SECTION */
+
+.footer {
+  border-top: solid #F3C404;;
+  background-color: #004179;
+  color: white;
+  padding: 2rem 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1 1 250px;
+}
+
+.footer-left .logo {
+  width: 160px;
+  margin-bottom: 0.5rem;
+}
+
+.project-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+
+}
+
+.tagline {
+  font-style: italic;
+}
+
+.footer-center a,
+.footer-right a {
+  color: #F3C404;
+  text-decoration: none;
+}
+
+.footer-center a:hover,
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #F3C404;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+
 
 
 
