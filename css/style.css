@@ -2,9 +2,7 @@
 body {
      font-family: 'Georgia', Arial, sans-serif;
      margin: 0;
-     padding-left: 10px;
-     padding-right: 10px;
-     background: rgb(0, 65, 121);
+     background-color: rgb(0, 65, 121);
      color: #ffffff;
      line-height: 1.6;
    }
@@ -52,6 +50,23 @@ body {
   font-weight: bold;
   font-size: 1rem;
   transition: color 0.3s;
+}
+
+#navBar #themeColor{
+  text-decoration: none;
+  font-weight: bold;
+  color: #004179 ;
+  border: 1px solid;
+  background-color: #F3C404;
+  border-radius: 5px;
+  padding: 3px;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0.8, 0.8, 0.8);
+  cursor: pointer;
+}
+
+#navBar #themeColor:hover {
+  background-color:rgb(204, 169, 2);
 }
 
 #navBar li a:hover {
@@ -302,9 +317,10 @@ body {
   align-content: center;
   list-style-type: none;
 }
+
 #FeaturedSec img {
-  height: 315px;
-  width: 230px;
+  height: 345px;
+  width: 260px;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -317,10 +333,11 @@ body {
 
 /*CREATE YOUR OWN SECTION STYLES */
 .create-section {
-  background-color: #004179; /* Trinity Blue */
   color: white;
   padding: 3rem 1rem;
   text-align: center;
+  border-top: solid grey;
+  border-bottom: solid grey;
 }
 
 .create-section h2 {
@@ -362,6 +379,64 @@ body {
 
 .create-form button:hover {
   background-color: #d5ae00;
+}
+
+/*RSVP SECTION STYLES*/
+#RSVPSection {
+  padding: 2rem;
+  border-top: solid grey;
+}
+
+.rsvp-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.rsvp-left, .rsvp-right {
+  flex: 1 1 45%;
+}
+
+#rsvpForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+#rsvpForm input, #rsvpForm button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#rsvpForm button {
+  padding: 0.75rem 1.5rem;
+  background-color: #F3C404;
+  color: #004179;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#rsvpForm button:hover {
+  background-color: #d5ae00;
+}
+
+#rsvpList {
+  list-style: none;
+  padding: 0;
+}
+
+#rsvpList li {
+  padding: 0.75rem;
+  border: 1px solid #F3C404;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
 }
 
 
@@ -431,6 +506,7 @@ body {
 }
 
 
-
-
-
+.error {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}

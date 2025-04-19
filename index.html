@@ -20,8 +20,9 @@
         <li><a href="#How">How It Works</a></li>
         <li><a href="#Featured">Featured Visions</a></li>
         <li><a href="#Create">Create Your Own</a></li>
-        <li><a href="#Historical">Historical Exhibit</a></li>
+<!--        <li><a href="#Historical">Historical Exhibit</a></li>-->
         <li><a href="#AboutUs">About Us</a></li>
+        <li id="themeColor" >Toggle Theme Color</li>
       </ul>
     </nav>
   </header>
@@ -147,8 +148,35 @@
       </form>
     </div>
 
+  <section id="RSVPSection">
+    <div class="rsvp-container">
+      <div class="rsvp-left">
+        <h2>RSVP to the 2123 Project Exhibit</h2>
+        <p>Join us in envisioning the future of Trinity College. Submit your RSVP below to secure your spot at the exhibit and add your name to the wall of future-thinkers.</p>
 
-    <footer class="footer">
+        <form id="rsvpForm">
+          <input type="text" id="name" class="rsvp-input" placeholder="Your Name" required>
+          <input type="email" id="email" class="rsvp-input" placeholder="Your Email" required>
+          <input type="text" id="comment" class="rsvp-input" placeholder="Why are you excited to attend?" required>
+          <button type="submit">Submit RSVP</button>
+        </form>
+      </div>
+
+      <div class="rsvp-right">
+        <h3>Attending</h3>
+        <ul id="rsvpList">
+          <li>Ava Martinez – I want to see how students imagine the future of education</li>
+
+          <li>Jordan Lee – I'm excited to be part of something visionary and creative</li>
+
+          <li> Samira Patel – As an alum, I’m curious how Trinity is preparing for the next 100 years</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
       <div class="footer-content">
         <div class="footer-left">
           <img src="assets/trinity-logo.png" alt="Trinity College Logo" class="logo">
