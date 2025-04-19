@@ -42,11 +42,9 @@ const validateForm = (event) => {
         }
     }
 
-    // TODO: If no errors, call addParticipant() and clear fields
     if (!containsErrors) {
         addParticipant();
 
-        // Clear fields
         for (let i = 0; i < rsvpInputs.length; i++) {
             rsvpInputs[i].value = "";
         }
