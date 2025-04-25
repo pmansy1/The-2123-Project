@@ -63,8 +63,8 @@ rsvpForm.addEventListener('submit', validateForm);
 
 // MODAL
 const toggleModal = (person) => {
-    let modal = document.getElementById('success-modal'); // TODO
-    let modalContent = document.getElementById('modal-item'); // TODO
+    let modal = document.getElementById('success-modal');
+    let modalContent = document.getElementById('modal-item');
     modal.style.display = 'flex';
     modalContent.textContent = `Congratulations ${person.name}! You are officially signed up to attend the Project 2123 Exhibit. Can't wait to see you there!`;
 
@@ -73,7 +73,7 @@ const toggleModal = (person) => {
     // Set modal timeout to 5 seconds
     setTimeout(() => {
         modal.style.display = 'none';
-    }, 5000);
+    }, 5000) ;
 
     let intervalId = setInterval(animateImage, 900);
     setTimeout(() => {
@@ -82,7 +82,6 @@ const toggleModal = (person) => {
 
 
 }
-// TODO: animation variables and animateImage()
 let rotateFactor = 0;
 let modalImage = document.getElementById('modal-img');
 
