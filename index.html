@@ -13,211 +13,381 @@
   </head>
 
   <body>
-  <header id="HeadSec">
-    <nav class="navbar">
-      <ul id="navBar">
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">How It Works</a></li>
-        <li><a href="#">Featured Visions</a></li>
-        <li><a href="#">Create Your Own</a></li>
-<!--        <li><a href="#Historical">Historical Exhibit</a></li>-->
-        <li><a href="#">About Us</a></li>
-        <li id="themeColor" >Toggle Theme Color</li>
-      </ul>
-    </nav>
-  </header>
+    <header id="HeadSec" role="banner">
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <ul id="navBar">
+          <li>
+            <a href="#AboutSec" aria-label="Go to Overview section">Overview</a>
+          </li>
+          <li>
+            <a href="#HowSec" aria-label="Go to How It Works section"
+              >How It Works</a
+            >
+          </li>
+          <li>
+            <a href="#FeaturedSec" aria-label="Go to Featured Visions section"
+              >Featured Visions</a
+            >
+          </li>
+          <li>
+            <a href="#CreateSec" aria-label="Go to Create Your Own section"
+              >Create Your Own</a
+            >
+          </li>
+          <li>
+            <a href="#RSVPSection" aria-label="Go to RSVP section">RSVP</a>
+          </li>
+          <li>
+            <button
+              id="themeColor"
+              aria-label="Toggle between light and dark theme"
+            >
+              Toggle Theme Color
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-
-  <div id="HeroSec">
-      <h1>THE 2123 PROJECT</h1>
+    <section id="HeroSec" role="banner" aria-labelledby="hero-title">
+      <h1 id="hero-title">THE 2123 PROJECT</h1>
       <h3>Envisioning Life in 2123</h3>
       <h2>EXPLORE THE FUTURE</h2>
-      <button id="ctaBtn">Explore</button>
-    </div>
+      <button id="ctaBtn" aria-label="Explore the 2123 Project">Explore</button>
+    </section>
 
-    <div id="AboutSec">
+    <section id="AboutSec" aria-labelledby="about-title">
       <div id="OverviewSec">
-        <h2>Overview of The Project</h2>
+        <h2 id="about-title">Overview of The Project</h2>
         <p>
           The 2123 Project is a visionary initiative celebrating Trinity
-          College’s Bicentennial by imagining the world 100 years from now.
+          College's Bicentennial by imagining the world 100 years from now.
           Using AI-generated trading cards, historical archives, and
           community-driven ideas, we explore the innovations, culture, and
-          possibilities of the future. Join us in envisioning Trinity’s
+          possibilities of the future. Join us in envisioning Trinity's
           Tercentennial by contributing your own futuristic vision!
         </p>
       </div>
 
-        <section id="timelineSection">
-          <h2>Timeline</h2>
-          <div id="line"></div>
-          <div class="dot-container">
-            <span class="dot" id="dot1"></span>
-            <span class="dot" id="dot2" ></span>
-            <span class="dot" id="dot3"></span>
-          </div>
+      <section id="timelineSection" aria-labelledby="timeline-title">
+        <h2 id="timeline-title">Timeline</h2>
+        <div id="line" role="presentation" aria-hidden="true"></div>
+        <div class="dot-container" role="presentation" aria-hidden="true">
+          <span class="dot" id="dot1" aria-hidden="true"></span>
+          <span class="dot" id="dot2" aria-hidden="true"></span>
+          <span class="dot" id="dot3" aria-hidden="true"></span>
+        </div>
 
-          <ul id="timeline">
-            <!-- Timeline points -->
-              <li class="label">1823 (Founding)</li>
-              <li class="label">2023 (Bicentennial)</li>
-              <li class="label">2123 (Future Visioning)</li>
-          </ul>
+        <ul id="timeline" role="list" aria-label="Trinity College timeline">
+          <li class="label">1823 (Founding)</li>
+          <li class="label">2023 (Bicentennial)</li>
+          <li class="label">2123 (Future Visioning)</li>
+        </ul>
 
-          <h3>Trinity's Vision</h3>
+        <h3>Trinity's Vision</h3>
         <p>
           Trinity College aims to prepare students to be bold, independent
           thinkers, enable them to learn what they love, build their confidence,
           and become leaders and innovators, while supporting all members of the
           community in achieving their potential.
         </p>
-        </section>
+      </section>
+    </section>
+
+    <section id="HowSec" aria-labelledby="how-title">
+      <h2 id="how-title">How It Works</h2>
+      <div
+        id="imgContainer"
+        role="img"
+        aria-label="Three step process illustration"
+      >
+        <img
+          id="SubmitPNG"
+          src="assets/Submit.png"
+          alt="Step 1: Submit your vision form"
+        />
+        <img
+          id="TradingCardPNG"
+          src="assets/TradingCard.png"
+          alt="Step 2: AI generates trading card"
+        />
+        <img
+          id="ExhibitPNG"
+          src="assets/Exhibit.png"
+          alt="Step 3: Featured in exhibit"
+        />
       </div>
-
-
-      
-
-    <div id="HowSec">
-      <h2>How It Works</h2>
-      <div id="imgContainer">
-        <img  id= "SubmitPNG" src="assets/Submit.png" alt="Submit.pn">
-        <img id= "TradingCardPNG" src="assets/TradingCard.png" alt="TradingCard.png">
-        <img id= "ExhibitPNG" src="assets/Exhibit.png" alt="Exhibit.png">
-
-      </div>
-      <div id="stepContainer">
+      <div id="stepContainer" role="presentation" aria-hidden="true">
         <p>Step 1:</p>
         <p>Step 2:</p>
         <p>Step 3:</p>
       </div>
 
-      <ul>
+      <ol role="list" aria-label="How the 2123 Project works">
+        <li>Submit Your Vision – Form where users share futuristic ideas.</li>
+        <li>AI Trading Cards – AI generates illustrated concept cards.</li>
         <li>
-          Submit Your Vision – Form where users share futuristic
-          ideas.
+          Showcased in the Exhibit – Selected ideas featured in a virtual &
+          physical gallery.
         </li>
-        <li>
-          AI Trading Cards – AI generates illustrated concept cards.
-        </li>
-        <li>
-          Showcased in the Exhibit – Selected ideas featured in a
-          virtual & physical gallery.
-        </li>
-      </ul>
-    </div>
+      </ol>
+    </section>
 
-    <div id="FeaturedSec">
-      <h2>Featured Works</h2>
+    <section id="FeaturedSec" aria-labelledby="featured-title">
+      <h2 id="featured-title">Featured Works</h2>
 
-      <div class="carousel">
+      <div
+        class="carousel"
+        role="region"
+        aria-label="Featured vision cards carousel"
+      >
+        <div class="carousel-container">
+          <ul
+            class="slides"
+            id="carousel-slides"
+            role="list"
+            aria-live="polite"
+          >
+            <li class="slide" id="s1">
+              <img
+                src="assets/33.png"
+                alt="Featured Vision Card 1 - Future Transportation"
+              />
+            </li>
+            <li class="slide" id="s2">
+              <img
+                src="assets/77.png"
+                alt="Featured Vision Card 2 - Future Living"
+              />
+            </li>
+            <li class="slide" id="s3">
+              <img
+                src="assets/96.png"
+                alt="Featured Vision Card 3 - Future Health"
+              />
+            </li>
+            <li class="slide" id="s4">
+              <img
+                src="assets/12.png"
+                alt="Featured Vision Card 4 - Future Technology"
+              />
+            </li>
+          </ul>
+        </div>
 
-        <ul class="slides">
-          <li class="slide" id="s1">
-            <img src="assets/33.png" alt="Slide 1">
-          </li>
-          <li class="slide" id="s2">
-            <img src="assets/77.png" alt="Slide 2">
-          </li>
-          <li class="slide" id="s3">
-            <img src="assets/96.png" alt="Slide 3">
-          </li>
-          <li class="slide" id="s4">
-            <img src="assets/12.png" alt="Slide 4">
-          </li>
-        </ul>
+        <div class="carousel-nav">
+          <button
+            class="carousel-btn"
+            id="prev-btn"
+            aria-label="Previous featured work"
+          >
+            ← Previous
+          </button>
+          <button
+            class="carousel-btn"
+            id="next-btn"
+            aria-label="Next featured work"
+          >
+            Next →
+          </button>
+        </div>
 
+        <div
+          class="carousel-dots"
+          role="tablist"
+          aria-label="Carousel navigation"
+        >
+          <button
+            class="dot-nav active"
+            data-slide="0"
+            role="tab"
+            aria-label="Go to slide 1"
+            aria-selected="true"
+          ></button>
+          <button
+            class="dot-nav"
+            data-slide="1"
+            role="tab"
+            aria-label="Go to slide 2"
+            aria-selected="false"
+          ></button>
+          <button
+            class="dot-nav"
+            data-slide="2"
+            role="tab"
+            aria-label="Go to slide 3"
+            aria-selected="false"
+          ></button>
+          <button
+            class="dot-nav"
+            data-slide="3"
+            role="tab"
+            aria-label="Go to slide 4"
+            aria-selected="false"
+          ></button>
+        </div>
       </div>
-    </div>
+    </section>
 
+    <!--    <div id="HistoricalSec">-->
+    <!--      <h2>Historical Exhibit</h2>-->
+    <!--      <div>*Card Examples*</div>-->
+    <!--    </div>-->
 
+    <section
+      id="CreateSec"
+      class="create-section"
+      aria-labelledby="create-title"
+    >
+      <h2 id="create-title">Create Your Own Vision</h2>
+      <p>
+        Be part of Trinity's future. Share your bold idea for the world of 2123
+        below:
+      </p>
 
-<!--    <div id="HistoricalSec">-->
-<!--      <h2>Historical Exhibit</h2>-->
-<!--      <div>*Card Examples*</div>-->
-<!--    </div>-->
-
-    <div id="CreateSec" class="create-section">
-      <h2>Create Your Own Vision</h2>
-      <p>Be part of Trinity’s future. Share your bold idea for the world of 2123 below:</p>
-
-      <form class="create-form">
-        <label>
-          <input type="text" placeholder="Enter your vision here..." required>
-        </label>
-        <button type="submit">Submit Vision</button>
+      <form class="create-form" aria-label="Submit your vision form">
+        <label for="vision-input" class="sr-only">Your vision for 2123</label>
+        <input
+          type="text"
+          id="vision-input"
+          placeholder="Enter your vision here..."
+          required
+          aria-describedby="vision-help"
+        />
+        <button type="submit" aria-label="Submit your vision">
+          Submit Vision
+        </button>
       </form>
+    </section>
+
+    <section id="RSVPSection" aria-labelledby="rsvp-title">
+      <div class="rsvp-container">
+        <div class="rsvp-left">
+          <h2 id="rsvp-title">RSVP to the 2123 Project Exhibit</h2>
+          <p>
+            Join us in envisioning the future of Trinity College. Submit your
+            RSVP below to secure your spot at the exhibit and add your name to
+            the wall of future-thinkers.
+          </p>
+
+          <form
+            id="rsvpForm"
+            aria-label="RSVP form for the 2123 Project Exhibit"
+          >
+            <label for="name" class="sr-only">Your full name</label>
+            <input
+              type="text"
+              id="name"
+              class="rsvp-input"
+              placeholder="Your Name"
+              required
+              aria-describedby="name-help"
+            />
+
+            <label for="email" class="sr-only">Your email address</label>
+            <input
+              type="email"
+              id="email"
+              class="rsvp-input"
+              placeholder="Your Email"
+              required
+              aria-describedby="email-help"
+            />
+
+            <label for="comment" class="sr-only"
+              >Why are you excited to attend?</label
+            >
+            <input
+              type="text"
+              id="comment"
+              class="rsvp-input"
+              placeholder="Why are you excited to attend?"
+              required
+              aria-describedby="comment-help"
+            />
+
+            <button type="submit" aria-label="Submit your RSVP">
+              Submit RSVP
+            </button>
+          </form>
+        </div>
+
+        <div class="rsvp-right">
+          <h3>Attending</h3>
+          <ul id="rsvpList" role="list" aria-label="List of attendees">
+            <li>
+              Ava – I want to see how students imagine the future of education
+            </li>
+            <li>
+              Jordan – I'm excited to be part of something visionary and
+              creative
+            </li>
+            <li>
+              Samira – As an alum, I'm curious how Trinity is preparing for the
+              next 100 years
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div
+      id="success-modal"
+      class="modal"
+      role="dialog"
+      aria-labelledby="modal-title"
+      aria-modal="true"
+    >
+      <div class="modal-container">
+        <div id="modal-item">
+          <h3 id="modal-title" class="sr-only">Success Message</h3>
+          <p>Placeholder text</p>
+        </div>
+        <div id="modal-img">
+          <img src="assets/star.png" alt="Success celebration star" />
+        </div>
+      </div>
     </div>
 
-  <section id="RSVPSection">
-    <div class="rsvp-container">
-      <div class="rsvp-left">
-        <h2>RSVP to the 2123 Project Exhibit</h2>
-        <p>Join us in envisioning the future of Trinity College. Submit your RSVP below to secure your spot at the exhibit and add your name to the wall of future-thinkers.</p>
-
-        <form id="rsvpForm">
-          <label>
-          <input type="text" id="name" class="rsvp-input" placeholder="Your Name" required>
-          <input type="email" id="email" class="rsvp-input" placeholder="Your Email" required>
-          <input type="text" id="comment" class="rsvp-input" placeholder="Why are you excited to attend?" required>
-          <button type="submit">Submit RSVP</button>
-          </label>
-        </form>
-      </div>
-
-      <div class="rsvp-right">
-        <h3>Attending</h3>
-        <ul id="rsvpList">
-          <li>Ava Martinez – I want to see how students imagine the future of education</li>
-
-          <li>Jordan Lee – I'm excited to be part of something visionary and creative</li>
-
-          <li> Samira Patel – As an alum, I’m curious how Trinity is preparing for the next 100 years</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <div id="success-modal" class="modal">
-    <div class="modal-container">
-      <div id="modal-item">
-        <p>Placeholder text </p>
-      </div>
-      <div id="modal-img">
-       <img src="assets/star.png" alt="Placeholder Image">
-      </div>
-    </div>
-  </div>
-
-
-
-  <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="footer-content">
         <div class="footer-left">
-          <img src="assets/trinity-logo.png" alt="Trinity College Logo" class="logo">
+          <img
+            src="assets/trinity-logo.png"
+            alt="Trinity College Logo"
+            class="logo"
+          />
           <p class="project-name">The 2123 Project</p>
-          <p class="tagline">A Vision for Trinity’s Tercentennial</p>
+          <p class="tagline">A Vision for Trinity's Tercentennial</p>
         </div>
 
         <div class="footer-center">
-          <p><strong>Contact Us</strong></p>
+          <h3>Contact Us</h3>
           <p>📍 Trinity College, Hartford, CT</p>
-          <p>📧 <a href="mailto:2123project@trincoll.edu">2123project@trincoll.edu</a></p>
+          <p>
+            📧
+            <a href="mailto:2123project@trincoll.edu"
+              >2123project@trincoll.edu</a
+            >
+          </p>
         </div>
 
         <div class="footer-right">
-          <p><strong>Quick Links</strong></p>
-          <a href="#">About</a><br>
-          <a href="#">How It Works</a><br>
-          <a href="#">Featured Visions</a><br>
-          <a href="#">Submit Your Vision</a>
+          <h3>Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            <a href="#AboutSec">About</a><br />
+            <a href="#HowSec">How It Works</a><br />
+            <a href="#FeaturedSec">Featured Visions</a><br />
+            <a href="#CreateSec">Submit Your Vision</a>
+          </nav>
         </div>
       </div>
 
       <div class="footer-bottom">
         <p>© 2025 The 2123 Project. All rights reserved.</p>
-        <marquee behavior="scroll" direction="left" class="quote">
-          “The future belongs to those who imagine it.”
-        </marquee>
+        <div class="quote" role="text" aria-label="Inspirational quote">
+          "The future belongs to those who imagine it."
+        </div>
       </div>
     </footer>
 
