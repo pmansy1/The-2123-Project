@@ -3,17 +3,16 @@
 const btn = document.querySelector('#themeColor');
 
 function bgChange() {
-    const currentColor = getComputedStyle(document.body).backgroundColor;
-
-    if (currentColor === 'rgb(0, 65, 121)') {
-        document.body.style.backgroundColor = 'rgb(112,112,112)';
+    const body = document.body;
+    const isLightTheme = body.classList.contains('light-theme');
+    
+    if (isLightTheme) {
+        // Switch to dark theme
+        body.classList.remove('light-theme');
         btn.textContent = 'Light Theme';
-    } else if (currentColor === 'rgb(112,112,112)') {
-        document.body.style.backgroundColor = 'rgb(0, 65, 121)';
-        btn.textContent = 'Dark Theme';
     } else {
-        // default fallback
-        document.body.style.backgroundColor = 'rgb(0, 65, 121)';
+        // Switch to light theme
+        body.classList.add('light-theme');
         btn.textContent = 'Dark Theme';
     }
 }
@@ -274,6 +273,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 input.value = '';
             } else {
                 toggleModal('Please enter a vision with at least 10 characters.');
+            }
+        });
+    }
+    
+    // Handle Explore button click
+    const exploreBtn = document.getElementById('ctaBtn');
+    if (exploreBtn) {
+        exploreBtn.addEventListener('click', () => {
+            const aboutSection = document.getElementById('AboutSec');
+            if (aboutSection) {
+                aboutSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
         });
     }
