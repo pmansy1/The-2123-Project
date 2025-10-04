@@ -119,170 +119,19 @@ class Carousel {
 document.addEventListener('DOMContentLoaded', () => {
     new Carousel();
 });
-/***** Form Handling *****/
-const addParticipant = (person) => {
-    const rsvpList = document.getElementById('rsvpList');
-    const li = document.createElement('li');
-    li.textContent = `${person.name} – ${person.comment}`;
-    li.style.opacity = '0';
-    li.style.transform = 'translateY(20px)';
-    rsvpList.appendChild(li);
-    
-    // Animate the new item
-    setTimeout(() => {
-        li.style.transition = 'all 0.3s ease';
-        li.style.opacity = '1';
-        li.style.transform = 'translateY(0)';
-    }, 100);
-};
-
-/***** Enhanced Form Validation *****/
-const validateForm = (event) => {
-    event.preventDefault();
-
-    let containsErrors = false;
-    const rsvpInputs = document.querySelectorAll('.rsvp-input');
-    const submitBtn = event.target.querySelector('button[type="submit"]');
-
-    // Add loading state
-    submitBtn.classList.add('loading');
-    submitBtn.disabled = true;
-
-    // Validate each input
-    rsvpInputs.forEach((input, index) => {
-        const value = input.value.trim();
-        let isValid = true;
-        
-        // Remove previous error state
-        input.classList.remove('error');
-        
-        // Validation rules
-        if (index === 0) { // Name field
-            isValid = value.length >= 2 && /^[a-zA-Z\s]+$/.test(value);
-        } else if (index === 1) { // Email field
-            isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-        } else if (index === 2) { // Comment field
-            isValid = value.length >= 10;
-        }
-        
-        if (!isValid) {
-            containsErrors = true;
-            input.classList.add('error');
-            
-            // Add error message
-            let errorMsg = input.parentNode.querySelector('.error-message');
-            if (!errorMsg) {
-                errorMsg = document.createElement('div');
-                errorMsg.className = 'error-message';
-                errorMsg.style.color = '#ff4444';
-                errorMsg.style.fontSize = '0.8rem';
-                errorMsg.style.marginTop = '0.25rem';
-                input.parentNode.appendChild(errorMsg);
-            }
-            
-            // Set specific error messages
-            if (index === 0) {
-                errorMsg.textContent = 'Please enter a valid name (at least 2 characters, letters only)';
-            } else if (index === 1) {
-                errorMsg.textContent = 'Please enter a valid email address';
-            } else if (index === 2) {
-                errorMsg.textContent = 'Please enter a comment (at least 10 characters)';
-            }
-        } else {
-            // Remove error message if exists
-            const errorMsg = input.parentNode.querySelector('.error-message');
-            if (errorMsg) {
-                errorMsg.remove();
-            }
-        }
-    });
-
-    if (!containsErrors) {
-        const person = {
-            name: rsvpInputs[0].value.trim(),
-            email: rsvpInputs[1].value.trim(),
-            comment: rsvpInputs[2].value.trim(),
-        };
-
-        // Simulate API call delay
-        setTimeout(() => {
-            addParticipant(person);
-            toggleModal(person);
-            
-            // Clear form
-            rsvpInputs.forEach(input => {
-                input.value = "";
-                input.classList.remove('error');
-                const errorMsg = input.parentNode.querySelector('.error-message');
-                if (errorMsg) errorMsg.remove();
-            });
-            
-            // Remove loading state
-            submitBtn.classList.remove('loading');
-            submitBtn.disabled = false;
-        }, 1000);
-    } else {
-        // Remove loading state on error
-        setTimeout(() => {
-            submitBtn.classList.remove('loading');
-            submitBtn.disabled = false;
-        }, 500);
-    }
-};
-
-// Add real-time validation
-document.addEventListener('DOMContentLoaded', () => {
-    const rsvpInputs = document.querySelectorAll('.rsvp-input');
-    
-    rsvpInputs.forEach((input, index) => {
-        input.addEventListener('blur', () => {
-            const value = input.value.trim();
-            let isValid = true;
-            
-            if (index === 0) { // Name
-                isValid = value.length >= 2 && /^[a-zA-Z\s]+$/.test(value);
-            } else if (index === 1) { // Email
-                isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-            } else if (index === 2) { // Comment
-                isValid = value.length >= 10;
-            }
-            
-            if (value && !isValid) {
-                input.classList.add('error');
-            } else {
-                input.classList.remove('error');
-            }
-        });
-        
-        input.addEventListener('input', () => {
-            if (input.classList.contains('error')) {
-                input.classList.remove('error');
-                const errorMsg = input.parentNode.querySelector('.error-message');
-                if (errorMsg) errorMsg.remove();
-            }
-        });
-    });
-});
-
-// Add event listener to RSVP form
-const rsvpForm = document.getElementById('rsvpForm');
-if (rsvpForm) {
-    rsvpForm.addEventListener('submit', validateForm);
-}
+// RSVP functionality removed
 
 
 
 // Enhanced Modal functionality
-const toggleModal = (person) => {
+const toggleModal = (message) => {
     const modal = document.getElementById('success-modal');
     const modalContent = document.getElementById('modal-item');
     
     modal.style.display = 'flex';
     modalContent.innerHTML = `
-        <h3 style="color: #F3C404; margin-bottom: 1rem;">🎉 Congratulations!</h3>
-        <p>Dear <strong>${person.name}</strong>,</p>
-        <p>You are officially signed up to attend the Project 2123 Exhibit! We're thrilled to have you join us in envisioning Trinity's future.</p>
-        <p style="margin-top: 1rem; font-style: italic;">Can't wait to see you there!</p>
+        <h3 style="color: #F3C404; margin-bottom: 1rem;">🎉 Success!</h3>
+        <p>${message}</p>
     `;
 
     // Add click outside to close
@@ -301,10 +150,10 @@ const toggleModal = (person) => {
     };
     document.addEventListener('keydown', handleEscape);
 
-    // Auto-close after 6 seconds
+    // Auto-close after 4 seconds
     setTimeout(() => {
         closeModal();
-    }, 6000);
+    }, 4000);
 
     // Animate the star image
     animateImage();
@@ -410,3 +259,22 @@ const addScrollToTop = () => {
 
 // Initialize scroll-to-top when DOM is loaded
 document.addEventListener('DOMContentLoaded', addScrollToTop);
+
+// Handle Create Your Own Vision form
+document.addEventListener('DOMContentLoaded', () => {
+    const createForm = document.querySelector('.create-form');
+    if (createForm) {
+        createForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const input = createForm.querySelector('input[type="text"]');
+            const vision = input.value.trim();
+            
+            if (vision.length >= 10) {
+                toggleModal(`Thank you for sharing your vision: "${vision}". We'll review it and may feature it in our exhibit!`);
+                input.value = '';
+            } else {
+                toggleModal('Please enter a vision with at least 10 characters.');
+            }
+        });
+    }
+});

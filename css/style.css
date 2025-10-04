@@ -73,21 +73,6 @@ body {
   position: relative;
 }
 
-#navBar li a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background-color: #F3C404;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-}
-
-#navBar li a:hover::after {
-  width: 100%;
-}
 
 #navBar #themeColor{
   text-decoration: none;
@@ -105,13 +90,10 @@ body {
 
 #navBar #themeColor:hover {
   background-color: #d5ae00;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(243, 196, 4, 0.4);
 }
 
 #navBar li a:hover {
   color: #F3C404; /* Trinity Gold */
-  transform: translateY(-2px);
 }
 
 /* Mobile navigation */
@@ -366,10 +348,6 @@ body {
   transition: all 0.3s ease;
 }
 
-.dot:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 15px rgba(243, 196, 4, 0.6);
-}
 
 #dot1 {
   left: 0%;
@@ -546,11 +524,6 @@ body {
   line-height: 1.5;
 }
 
-#HowSec li:hover {
-  background: rgba(243, 196, 4, 0.2);
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(243, 196, 4, 0.2);
-}
 
 /* Responsive how it works section */
 @media (max-width: 768px) {
@@ -715,10 +688,6 @@ body {
   transform: scale(1.2);
 }
 
-.dot-nav:hover {
-  background-color: #F3C404;
-  transform: scale(1.1);
-}
 
 /* Responsive featured section */
 @media (max-width: 768px) {
@@ -876,7 +845,7 @@ body {
   }
 }
 
-/* RSVP SECTION STYLES */
+/* RSVP SECTION STYLES - REMOVED */
 #RSVPSection {
   padding: 3rem 1rem;
   border-top: solid grey;
@@ -1000,11 +969,6 @@ body {
   line-height: 1.5;
 }
 
-#rsvpList li:hover {
-  background: rgba(243, 196, 4, 0.2);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(243, 196, 4, 0.2);
-}
 
 /* Form validation styles */
 .rsvp-input.error {
@@ -1174,9 +1138,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-.footer-left .logo:hover {
-  transform: scale(1.05);
-}
 
 .project-name {
   font-size: 1.4rem;
@@ -1215,7 +1176,6 @@ body {
 .footer-center a:hover,
 .footer-right a:hover {
   color: #d5ae00;
-  transform: translateY(-2px);
 }
 
 .footer-bottom {
