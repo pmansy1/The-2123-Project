@@ -1,0 +1,19 @@
+# Google AI Studio Configuration Template
+# Copy these settings to your environment variables or application-local.properties
+# DO NOT commit actual API keys to version control
+
+# Required: Google AI Studio API Key
+SPRING_AI_GOOGLE_AI_API_KEY=your-api-key-here
+
+# Optional: Model configuration
+spring.ai.google.ai.image.model=imagen-3.0-generate-001
+
+# Example values (DO NOT USE THESE):
+# SPRING_AI_GOOGLE_AI_API_KEY=AIzaSyBxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# Setup Instructions:
+# 1. Go to https://aistudio.google.com/
+# 2. Sign in with your Google account
+# 3. Click "Get API Key" in the left sidebar
+# 4. Create a new API key
+# 5. Copy the key and set it as an environment variable

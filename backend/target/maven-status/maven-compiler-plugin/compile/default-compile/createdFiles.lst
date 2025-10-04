@@ -1,0 +1,8 @@
+edu/trincoll/project2123/model/Card.class
+edu/trincoll/project2123/config/DataInitializer.class
+edu/trincoll/project2123/service/AIImageGenerationService$1.class
+edu/trincoll/project2123/Project2123Application.class
+edu/trincoll/project2123/model/CardCategory.class
+edu/trincoll/project2123/controller/CardController.class
+edu/trincoll/project2123/repository/CardRepository.class
+edu/trincoll/project2123/controller/CardController$CardGenerationRequest.class

@@ -30,6 +30,11 @@
             >
           </li>
           <li>
+            <a href="#GallerySec" aria-label="Go to Virtual Gallery section"
+              >Virtual Gallery</a
+            >
+          </li>
+          <li>
             <a href="#CreateSec" aria-label="Go to Create Your Own section"
               >Create Your Own</a
             >
@@ -226,6 +231,67 @@
       </div>
     </section>
 
+    <section id="GallerySec" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">Virtual Gallery</h2>
+      <p>
+        Explore all visions from The 2123 Project. Click on any card to view it
+        in full detail.
+      </p>
+
+      <div class="gallery-controls">
+        <div class="gallery-filters">
+          <label for="category-filter">Filter by Category:</label>
+          <select id="category-filter" aria-label="Filter cards by category">
+            <option value="all">All Categories</option>
+            <option value="HEALTH">Health</option>
+            <option value="TRANSPORTATION">Transportation</option>
+            <option value="LIVING">Living</option>
+            <option value="COMMUNICATION">Communication</option>
+            <option value="WORK">Work</option>
+            <option value="OTHER">Other</option>
+          </select>
+        </div>
+
+        <div class="gallery-search">
+          <label for="search-input">Search:</label>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search visions..."
+            aria-label="Search visions"
+          />
+        </div>
+
+        <div class="gallery-sort">
+          <label for="sort-select">Sort by:</label>
+          <select id="sort-select" aria-label="Sort cards">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="title">Title A-Z</option>
+            <option value="category">Category</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="gallery-stats" aria-live="polite">
+        <span id="gallery-count">Loading cards...</span>
+      </div>
+
+      <div
+        class="gallery-grid"
+        id="gallery-grid"
+        role="grid"
+        aria-label="Virtual gallery of vision cards"
+      >
+        <!-- Cards will be dynamically inserted here -->
+      </div>
+
+      <div class="gallery-loading" id="gallery-loading" style="display: none">
+        <div class="loading-spinner"></div>
+        <p>Loading more cards...</p>
+      </div>
+    </section>
+
     <!--    <div id="HistoricalSec">-->
     <!--      <h2>Historical Exhibit</h2>-->
     <!--      <div>*Card Examples*</div>-->
@@ -257,6 +323,7 @@
       </form>
     </section>
 
+    <!-- Success Modal -->
     <div
       id="success-modal"
       class="modal"
@@ -271,6 +338,43 @@
         </div>
         <div id="modal-img">
           <img src="assets/star.png" alt="Success celebration star" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Lightbox Modal -->
+    <div
+      id="gallery-lightbox"
+      class="lightbox-modal"
+      role="dialog"
+      aria-labelledby="lightbox-title"
+      aria-modal="true"
+      style="display: none"
+    >
+      <div class="lightbox-container">
+        <button class="lightbox-close" aria-label="Close lightbox">
+          &times;
+        </button>
+        <button class="lightbox-prev" aria-label="Previous card">&larr;</button>
+        <button class="lightbox-next" aria-label="Next card">&rarr;</button>
+
+        <div class="lightbox-content">
+          <div class="lightbox-image-container">
+            <img id="lightbox-image" src="" alt="" />
+          </div>
+          <div class="lightbox-info">
+            <h3 id="lightbox-title"></h3>
+            <p id="lightbox-description"></p>
+            <div class="lightbox-meta">
+              <span class="lightbox-category"></span>
+              <span class="lightbox-submitted-by"></span>
+              <span class="lightbox-date"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lightbox-counter">
+          <span id="lightbox-counter">1 of 1</span>
         </div>
       </div>
     </div>
